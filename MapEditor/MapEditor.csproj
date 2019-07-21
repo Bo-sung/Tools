@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E389F2C-6375-4ABC-AD4F-DD23B170D731}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MapEditor</RootNamespace>
+    <AssemblyName>MapEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="File_IO.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map.cs" />
+    <Compile Include="ObjectFactories.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="statics.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\block.png" />
+    <Content Include="Resources\block1.png" />
+    <Content Include="Resources\bog_green0.png" />
+    <Content Include="Resources\bog_green1.png" />
+    <Content Include="Resources\bog_green2.png" />
+    <Content Include="Resources\bog_green3.png" />
+    <Content Include="Resources\cobble_blood1.png" />
+    <Content Include="Resources\cobble_blood10.png" />
+    <Content Include="Resources\cobble_blood11.png" />
+    <Content Include="Resources\cobble_blood12.png" />
+    <Content Include="Resources\cobble_blood2.png" />
+    <Content Include="Resources\cobble_blood3.png" />
+    <Content Include="Resources\cobble_blood4.png" />
+    <Content Include="Resources\cobble_blood5.png" />
+    <Content Include="Resources\cobble_blood6.png" />
+    <Content Include="Resources\cobble_blood7.png" />
+    <Content Include="Resources\cobble_blood8.png" />
+    <Content Include="Resources\cobble_blood9.png" />
+    <Content Include="Resources\crystal_floor0.png" />
+    <Content Include="Resources\crystal_floor1.png" />
+    <Content Include="Resources\crystal_floor2.png" />
+    <Content Include="Resources\crystal_floor3.png" />
+    <Content Include="Resources\crystal_floor4.png" />
+    <Content Include="Resources\crystal_floor5.png" />
+    <Content Include="Resources\dirt0.png" />
+    <Content Include="Resources\dirt1.png" />
+    <Content Include="Resources\dirt2.png" />
+    <Content Include="Resources\dirt_e.png" />
+    <Content Include="Resources\dirt_full.png" />
+    <Content Include="Resources\dirt_n.png" />
+    <Content Include="Resources\dirt_ne.png" />
+    <Content Include="Resources\dirt_nw.png" />
+    <Content Include="Resources\dirt_s.png" />
+    <Content Include="Resources\dirt_se.png" />
+    <Content Include="Resources\dirt_sw.png" />
+    <Content Include="Resources\dirt_w.png" />
+    <Content Include="Resources\floor_nerves0.png" />
+    <Content Include="Resources\floor_nerves1.png" />
+    <Content Include="Resources\floor_nerves2.png" />
+    <Content Include="Resources\floor_nerves3.png" />
+    <Content Include="Resources\floor_nerves4.png" />
+    <Content Include="Resources\floor_nerves5.png" />
+    <Content Include="Resources\floor_nerves6.png" />
+    <Content Include="Resources\floor_sand_stone0.png" />
+    <Content Include="Resources\floor_sand_stone1.png" />
+    <Content Include="Resources\floor_sand_stone2.png" />
+    <Content Include="Resources\floor_sand_stone3.png" />
+    <Content Include="Resources\floor_sand_stone4.png" />
+    <Content Include="Resources\floor_sand_stone5.png" />
+    <Content Include="Resources\floor_sand_stone6.png" />
+    <Content Include="Resources\floor_sand_stone7.png" />
+    <Content Include="Resources\floor_vines0.png" />
+    <Content Include="Resources\floor_vines1.png" />
+    <Content Include="Resources\floor_vines2.png" />
+    <Content Include="Resources\floor_vines3.png" />
+    <Content Include="Resources\floor_vines4.png" />
+    <Content Include="Resources\floor_vines5.png" />
+    <Content Include="Resources\floor_vines6.png" />
+    <Content Include="Resources\grey_dirt0.png" />
+    <Content Include="Resources\grey_dirt1.png" />
+    <Content Include="Resources\grey_dirt2.png" />
+    <Content Include="Resources\grey_dirt3.png" />
+    <Content Include="Resources\grey_dirt4.png" />
+    <Content Include="Resources\grey_dirt5.png" />
+    <Content Include="Resources\grey_dirt6.png" />
+    <Content Include="Resources\grey_dirt7.png" />
+    <Content Include="Resources\hive0.png" />
+    <Content Include="Resources\hive1.png" />
+    <Content Include="Resources\hive2.png" />
+    <Content Include="Resources\hive3.png" />
+    <Content Include="Resources\ice0.png" />
+    <Content Include="Resources\ice1.png" />
+    <Content Include="Resources\ice2.png" />
+    <Content Include="Resources\ice3.png" />
+    <Content Include="Resources\lair0.png" />
+    <Content Include="Resources\lair1.png" />
+    <Content Include="Resources\lair2.png" />
+    <Content Include="Resources\lair3.png" />
+    <Content Include="Resources\lava0.png" />
+    <Content Include="Resources\lava1.png" />
+    <Content Include="Resources\lava2.png" />
+    <Content Include="Resources\lava3.png" />
+    <Content Include="Resources\marble_floor1.png" />
+    <Content Include="Resources\marble_floor2.png" />
+    <Content Include="Resources\marble_floor3.png" />
+    <Content Include="Resources\marble_floor4.png" />
+    <Content Include="Resources\marble_floor5.png" />
+    <Content Include="Resources\marble_floor6.png" />
+    <Content Include="Resources\mesh0.png" />
+    <Content Include="Resources\mesh1.png" />
+    <Content Include="Resources\mesh2.png" />
+    <Content Include="Resources\mesh3.png" />
+    <Content Include="Resources\pebble_brown0.png" />
+    <Content Include="Resources\pebble_brown1.png" />
+    <Content Include="Resources\pebble_brown2.png" />
+    <Content Include="Resources\pebble_brown3.png" />
+    <Content Include="Resources\pebble_brown4.png" />
+    <Content Include="Resources\pebble_brown5.png" />
+    <Content Include="Resources\pebble_brown6.png" />
+    <Content Include="Resources\pebble_brown7.png" />
+    <Content Include="Resources\pebble_brown8.png" />
+    <Content Include="Resources\pedestal_e.png" />
+    <Content Include="Resources\pedestal_full.png" />
+    <Content Include="Resources\pedestal_n.png" />
+    <Content Include="Resources\pedestal_ne.png" />
+    <Content Include="Resources\pedestal_nw.png" />
+    <Content Include="Resources\pedestal_s.png" />
+    <Content Include="Resources\pedestal_se.png" />
+    <Content Include="Resources\pedestal_sw.png" />
+    <Content Include="Resources\pedestal_w.png" />
+    <Content Include="Resources\rect_gray0.png" />
+    <Content Include="Resources\rect_gray1.png" />
+    <Content Include="Resources\rect_gray2.png" />
+    <Content Include="Resources\rect_gray3.png" />
+    <Content Include="Resources\rough_red0.png" />
+    <Content Include="Resources\rough_red1.png" />
+    <Content Include="Resources\rough_red2.png" />
+    <Content Include="Resources\rough_red3.png" />
+    <Content Include="Resources\sandstone_floor0.png" />
+    <Content Include="Resources\sandstone_floor1.png" />
+    <Content Include="Resources\sandstone_floor2.png" />
+    <Content Include="Resources\sandstone_floor3.png" />
+    <Content Include="Resources\sandstone_floor4.png" />
+    <Content Include="Resources\sandstone_floor5.png" />
+    <Content Include="Resources\sandstone_floor6.png" />
+    <Content Include="Resources\sandstone_floor7.png" />
+    <Content Include="Resources\sandstone_floor8.png" />
+    <Content Include="Resources\sandstone_floor9.png" />
+    <Content Include="Resources\snake0.png" />
+    <Content Include="Resources\snake1.png" />
+    <Content Include="Resources\snake2.png" />
+    <Content Include="Resources\snake3.png" />
+    <Content Include="Resources\swamp0.png" />
+    <Content Include="Resources\swamp1.png" />
+    <Content Include="Resources\swamp2.png" />
+    <Content Include="Resources\swamp3.png" />
+    <Content Include="Resources\tomb0.png" />
+    <Content Include="Resources\tomb1.png" />
+    <Content Include="Resources\tomb2.png" />
+    <Content Include="Resources\tomb3.png" />
+    <Content Include="Resources\tutorial_pad.png" />
+    <Content Include="Resources\volcanic_floor0.png" />
+    <Content Include="Resources\volcanic_floor1.png" />
+    <Content Include="Resources\volcanic_floor2.png" />
+    <Content Include="Resources\volcanic_floor3.png" />
+    <Content Include="Resources\volcanic_floor4.png" />
+    <Content Include="Resources\volcanic_floor5.png" />
+    <Content Include="Resources\volcanic_floor6.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
